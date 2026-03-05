@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung — APEX</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;600;700;800&family=Barlow:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void:     #060606;
+  --carbon:   #0D0D0D;
+  --steel:    #161616;
+  --titanium: #242424;
+  --alloy:    #404040;
+  --mist:     #6E7780;
+  --vapor:    #B8C4CC;
+  --white:    #ECEEF0;
+  --volt:     #D4FF00;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Satoshi', sans-serif;
+  --r: 2px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--void);color:var(--white);
+  font-family:var(--font-body);font-weight:400;
+  line-height:1.6;overflow-x:hidden;min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;opacity:1;
+}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 52px;
+  background:linear-gradient(to bottom,rgba(6,6,6,.98) 80%,transparent);
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-name{
+  font-family:var(--font-display);font-weight:800;
+  font-size:14px;letter-spacing:2px;color:var(--white);text-transform:uppercase;
+}
+.nav-back{
+  font-family:var(--font-body);font-size:10px;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;
+  color:rgba(255,255,255,.35);text-decoration:none;
+  transition:color .2s;display:flex;align-items:center;gap:8px;
+}
+.nav-back:hover{color:var(--volt);}
+
+/* TOC */
+.toc{
+  background:var(--carbon);border:1px solid var(--titanium);
+  padding:24px 28px;margin-bottom:32px;border-radius:var(--r);
+}
+.toc-title{
+  font-family:var(--font-body);font-size:9px;letter-spacing:2px;
+  color:var(--volt);text-transform:uppercase;font-weight:700;margin-bottom:14px;
+}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.toc-list a{
+  font-family:var(--font-body);font-size:13px;color:rgba(255,255,255,.45);
+  text-decoration:none;transition:color .2s;
+  display:flex;align-items:center;gap:10px;
+}
+.toc-list a::before{
+  content:'';width:16px;height:1px;
+  background:rgba(212,255,0,.3);flex-shrink:0;
+}
+.toc-list a:hover{color:var(--volt);}
+
+.page-wrap{
+  max-width:720px;margin:0 auto;
+  padding:140px 24px 100px;
+}
+.page-eyebrow{
+  font-family:var(--font-body);font-size:9px;letter-spacing:2px;
+  color:var(--volt);text-transform:uppercase;margin-bottom:16px;
+  display:flex;align-items:center;gap:14px;
+}
+.page-eyebrow::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--titanium),transparent);}
+.page-title{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(36px,7vw,68px);
+  letter-spacing:2px;line-height:.92;
+  color:var(--white);margin-bottom:12px;text-transform:uppercase;
+}
+.page-date{
+  font-family:var(--font-body);font-size:11px;letter-spacing:1px;
+  color:rgba(255,255,255,.25);text-transform:uppercase;margin-bottom:48px;
+}
+
+.section-block{
+  background:var(--carbon);border:1px solid var(--titanium);
+  padding:28px 32px;margin-bottom:8px;
+  border-radius:var(--r);
+  scroll-margin-top:100px;
+}
+.block-label{
+  font-family:var(--font-body);font-size:9px;letter-spacing:2px;
+  color:var(--volt);text-transform:uppercase;margin-bottom:8px;font-weight:700;
+}
+.block-title{
+  font-family:var(--font-display);font-weight:700;font-size:20px;
+  letter-spacing:1px;color:var(--white);text-transform:uppercase;
+  margin-bottom:14px;
+}
+.block-text{
+  font-family:var(--font-body);font-size:14px;color:rgba(255,255,255,.5);
+  line-height:1.8;
+}
+.block-text strong{color:rgba(255,255,255,.82);font-weight:600;}
+.block-text a{color:var(--volt);text-decoration:none;}
+.block-text a:hover{text-decoration:underline;}
+.block-text p{margin-bottom:12px;}
+.block-text p:last-child{margin-bottom:0;}
+.block-text ul{margin:10px 0 12px 18px;display:flex;flex-direction:column;gap:6px;}
+.block-text li{color:rgba(255,255,255,.5);font-size:14px;line-height:1.7;}
+.block-text h4{
+  font-family:var(--font-display);font-weight:700;font-size:15px;
+  letter-spacing:.5px;color:rgba(255,255,255,.7);text-transform:uppercase;
+  margin:18px 0 8px;
+}
+.block-text h4:first-child{margin-top:0;}
+
+.highlight-box{
+  background:rgba(212,255,0,.04);
+  border:1px solid rgba(212,255,0,.12);
+  border-left:2px solid rgba(212,255,0,.4);
+  padding:16px 20px;margin:14px 0;
+  border-radius:var(--r);
+}
+.highlight-box p{color:rgba(255,255,255,.55);font-size:13px;line-height:1.7;}
+.highlight-box strong{color:rgba(212,255,0,.8);}
+
+.rights-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;
+}
+.rights-item{
+  background:var(--steel);border:1px solid var(--titanium);
+  padding:14px 16px;border-radius:var(--r);
+}
+.rights-item-name{
+  font-family:var(--font-body);font-size:11px;font-weight:700;
+  letter-spacing:1px;color:rgba(255,255,255,.7);text-transform:uppercase;
+  margin-bottom:4px;
+}
+.rights-item-art{
+  font-family:var(--font-body);font-size:10px;
+  color:var(--volt);margin-bottom:6px;opacity:.7;
+}
+.rights-item-desc{
+  font-family:var(--font-body);font-size:12px;color:rgba(255,255,255,.38);line-height:1.55;
+}
+
+footer{
+  border-top:1px solid var(--titanium);
+  padding:32px 52px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+}
+.footer-logo{display:flex;align-items:center;gap:10px;}
+.footer-logo-name{
+  font-family:var(--font-display);font-weight:800;
+  font-size:13px;letter-spacing:2px;color:var(--alloy);
+}
+.footer-text{
+  font-family:var(--font-body);font-size:9px;
+  letter-spacing:2px;color:var(--alloy);text-transform:uppercase;
+}
+.footer-legal-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.footer-legal-link{
+  font-family:var(--font-body);font-size:9px;letter-spacing:1.5px;
+  color:rgba(255,255,255,.28);text-transform:uppercase;text-decoration:none;
+  transition:color .2s;
+}
+.footer-legal-link:hover{color:rgba(255,255,255,.6);}
+.footer-legal-sep{color:rgba(255,255,255,.15);font-size:9px;}
+
+@media(max-width:640px){
+  nav{padding:16px 20px;}
+  .page-wrap{padding:100px 20px 80px;}
+  .section-block{padding:20px 20px;}
+  .rights-grid{grid-template-columns:1fr;}
+  footer{padding:24px 20px;flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="18" height="18" viewBox="0 0 80 80" fill="none">
+      <path d="M40 7 L6 73 L74 73 Z" stroke="rgba(212,255,0,0.5)" stroke-width="4.5" stroke-linejoin="miter"/>
+      <line x1="13" y1="50" x2="67" y2="50" stroke="rgba(212,255,0,0.5)" stroke-width="4.5"/>
+    </svg>
+    <span class="nav-logo-name">APEX</span>
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 16 16" fill="none" width="12" height="12">
+      <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Zurück
+  </a>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="page-eyebrow">Rechtliche Angaben</div>
+  <h1 class="page-title">Datenschutz&shy;erklärung</h1>
+  <div class="page-date">Stand: März 2026 · Version 1.0</div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Inhalt</div>
+    <ul class="toc-list">
+      <li><a href="#s1">1. Verantwortlicher</a></li>
+      <li><a href="#s2">2. Grundsätze der Datenverarbeitung</a></li>
+      <li><a href="#s3">3. Hosting & technische Infrastruktur</a></li>
+      <li><a href="#s4">4. Warteliste (E-Mail-Eintragung)</a></li>
+      <li><a href="#s5">5. Cookies & lokale Speicherung</a></li>
+      <li><a href="#s6">6. Google Analytics 4</a></li>
+      <li><a href="#s7">7. Meta Pixel (Facebook/Instagram)</a></li>
+      <li><a href="#s8">8. Datenübermittlung in Drittstaaten (USA)</a></li>
+      <li><a href="#s9">9. Speicherdauer & Löschung</a></li>
+      <li><a href="#s10">10. Deine Rechte</a></li>
+      <li><a href="#s11">11. Beschwerderecht bei der Aufsichtsbehörde</a></li>
+      <li><a href="#s12">12. Automatisierte Entscheidungsfindung</a></li>
+      <li><a href="#s13">13. Änderungen dieser Erklärung</a></li>
+    </ul>
+  </div>
+
+  <!-- 1 -->
+  <div class="section-block" id="s1">
+    <div class="block-label">§ 1</div>
+    <div class="block-title">Verantwortlicher</div>
+    <div class="block-text">
+      <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG) ist:</p>
+      <p>
+        <strong>Nils Ian Muck</strong><br>
+        Sandroggenstraße 10a<br>
+        79395 Neuenburg am Rhein<br>
+        Deutschland<br><br>
+        <strong>Telefon:</strong> <a href="tel:+34610938019">+34 610 938 019</a><br>
+        <strong>E-Mail:</strong> <a href="/cdn-cgi/l/email-protection#402e292c332d35232b717500272d21292c6e232f2d"><span class="__cf_email__" data-cfemail="c8a6a1a4bba5bdaba3f9fd88afa5a9a1a4e6aba7a5">[email&#160;protected]</span></a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section-block" id="s2">
+    <div class="block-label">§ 2</div>
+    <div class="block-title">Grundsätze der Datenverarbeitung</div>
+    <div class="block-text">
+      <p>Wir verarbeiten personenbezogene Daten nur, wenn eine der folgenden Rechtsgrundlagen vorliegt:</p>
+      <ul>
+        <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> — Du hast ausdrücklich eingewilligt (z. B. Warteliste, Tracking-Cookies).</li>
+        <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> — Die Verarbeitung ist zur Erfüllung eines Vertrages oder vorvertraglicher Maßnahmen erforderlich.</li>
+        <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> — Die Verarbeitung dient unseren berechtigten Interessen (z. B. IT-Sicherheit, Betrugsprävention), sofern deine Interessen nicht überwiegen.</li>
+      </ul>
+      <p>Wir erheben nur die Daten, die für den jeweiligen Zweck unbedingt erforderlich sind (<em>Datensparsamkeit</em>, Art. 5 Abs. 1 lit. c DSGVO).</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="section-block" id="s3">
+    <div class="block-label">§ 3</div>
+    <div class="block-title">Hosting & technische Infrastruktur</div>
+    <div class="block-text">
+      <h4>Server-Logfiles</h4>
+      <p>Beim Aufruf dieser Website werden automatisch sogenannte Server-Logfiles erstellt. Diese enthalten:</p>
+      <ul>
+        <li>Browsertyp und Browserversion</li>
+        <li>Verwendetes Betriebssystem</li>
+        <li>Referrer-URL (zuvor besuchte Seite)</li>
+        <li>Hostname des zugreifenden Rechners</li>
+        <li>Uhrzeit der Serveranfrage</li>
+        <li>IP-Adresse (anonymisiert bzw. nach kurzer Zeit gelöscht)</li>
+      </ul>
+      <p>Diese Daten sind nicht anderen Datenquellen zuordenbar und werden nicht mit anderen Daten zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien Bereitstellung der Website). Speicherdauer: 7 Tage.</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section-block" id="s4">
+    <div class="block-label">§ 4</div>
+    <div class="block-title">Warteliste (E-Mail-Eintragung)</div>
+    <div class="block-text">
+      <h4>Was wird erhoben?</h4>
+      <p>Wenn du dich in unsere Warteliste einträgst, erheben wir folgende Daten:</p>
+      <ul>
+        <li>Deine E-Mail-Adresse</li>
+        <li>Zeitstempel der Einwilligung</li>
+        <li>Quelle der Eintragung (technisches Feld zur Betrugsprävention)</li>
+      </ul>
+
+      <h4>Zweck</h4>
+      <p>Wir verwenden deine E-Mail-Adresse ausschließlich, um dich über den Launch von Apex und den Entwicklungsfortschritt zu informieren (sog. „Build Dispatches"). Du erhältst keinerlei Werbung Dritter.</p>
+
+      <h4>Rechtsgrundlage</h4>
+      <p>Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung erfolgt durch Aktivierung der Checkbox beim Eintragen. Sie ist freiwillig und kann jederzeit mit Wirkung für die Zukunft widerrufen werden.</p>
+
+      <h4>Widerruf</h4>
+      <p>Du kannst deine Einwilligung jederzeit widerrufen, indem du eine E-Mail an <a href="/cdn-cgi/l/email-protection#d5bbbcb9a6b8a0b6bee4e095b2b8b4bcb9fbb6bab8"><span class="__cf_email__" data-cfemail="9df3f4f1eef0e8fef6aca8ddfaf0fcf4f1b3fef2f0">[email&#160;protected]</span></a> sendest. Nach Widerruf löschen wir deine E-Mail-Adresse unverzüglich aus unserer Datenbank. Die bis zum Widerruf erfolgte Verarbeitung bleibt rechtmäßig.</p>
+
+      <h4>Dienstleister: Supabase</h4>
+      <p>Zur Speicherung der Wartelisten-Daten nutzen wir <strong>Supabase Inc., 970 Toa Payoh North, Singapur 318992</strong> (Infrastruktur: Amazon Web Services, Frankfurt a.M., EU-Region). Supabase verarbeitet deine Daten ausschließlich im Auftrag und nach unseren Weisungen. Ein Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO ist geschlossen. Die Daten werden auf Servern innerhalb der EU gespeichert (eu-central-1, Frankfurt).</p>
+
+      <div class="highlight-box">
+        <p><strong>Hinweis:</strong> Deine E-Mail-Adresse wird nicht an Dritte weitergegeben, verkauft oder für andere Zwecke als die Wartelisten-Benachrichtigung genutzt.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="section-block" id="s5">
+    <div class="block-label">§ 5</div>
+    <div class="block-title">Cookies & lokale Speicherung</div>
+    <div class="block-text">
+      <h4>Was sind Cookies?</h4>
+      <p>Cookies sind kleine Textdateien, die im Browser gespeichert werden. Diese Website nutzt sowohl Cookies als auch den Browser-eigenen <em>localStorage</em>.</p>
+
+      <h4>Technisch notwendige Speicherung (kein Consent erforderlich)</h4>
+      <p>Folgende Daten werden ohne Einwilligung gespeichert, da sie für die Funktionsfähigkeit der Website unbedingt erforderlich sind (§ 25 Abs. 2 TDDDG):</p>
+      <ul>
+        <li><strong>apex_cookie_consent_v1</strong> (localStorage): Speichert deine Cookie-Einwilligung (Ja/Nein + Zeitstempel). Ablauf: 12 Monate.</li>
+        <li><strong>Athletenprofile</strong> (localStorage): Deine im Rechner gespeicherten Fitness-Profile. Diese verlassen deinen Browser nicht und werden nicht an uns übertragen.</li>
+      </ul>
+
+      <h4>Einwilligungspflichtige Cookies (nur nach Zustimmung)</h4>
+      <p>Tracking-Cookies (Google Analytics, Meta Pixel) werden nur gesetzt, wenn du im Cookie-Banner aktiv zustimmst. Deine Einwilligung kann jederzeit unter <em>Cookie-Einstellungen</em> im Footer der Website widerrufen werden.</p>
+      <p>Rechtsgrundlage für einwilligungspflichtige Cookies: Art. 6 Abs. 1 lit. a DSGVO i.V.m. § 25 Abs. 1 TDDDG.</p>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="section-block" id="s6">
+    <div class="block-label">§ 6</div>
+    <div class="block-title">Google Analytics 4</div>
+    <div class="block-text">
+      <h4>Anbieter & Umfang</h4>
+      <p>Diese Website verwendet <strong>Google Analytics 4 (GA4)</strong>, einen Webanalysedienst der <strong>Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</strong> (innerhalb der EU: Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland).</p>
+      <p>GA4 erfasst bei aktiviertem Tracking:</p>
+      <ul>
+        <li>Seitenaufrufe und Nutzungsdauer</li>
+        <li>Ungefähren Standort (Land/Region, keine exakte IP)</li>
+        <li>Geräte- und Browserinformationen</li>
+        <li>Ereignisse (z. B. Wartelisten-Anmeldungen)</li>
+      </ul>
+
+      <h4>IP-Anonymisierung</h4>
+      <p>Wir haben IP-Anonymisierung aktiviert (<code>anonymize_ip: true</code>). Deine IP-Adresse wird vor der Speicherung gekürzt und kann nicht zur Identifizierung zurückgeführt werden.</p>
+
+      <h4>Google Consent Mode v2</h4>
+      <p>Wir verwenden Google Consent Mode v2. Das bedeutet: Bevor du einwilligst, werden keine Analyse-Cookies gesetzt und keine personenbezogenen Daten übertragen. Google Analytics wird standardmäßig auf <em>denied</em> gesetzt und nur nach deiner ausdrücklichen Einwilligung aktiviert.</p>
+
+      <h4>Rechtsgrundlage</h4>
+      <p>Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung ist freiwillig und kann jederzeit im Cookie-Banner widerrufen werden.</p>
+
+      <h4>Auftragsverarbeitung & Datentransfer</h4>
+      <p>Mit Google ist ein Auftragsverarbeitungsvertrag geschlossen. Die Datenübertragung in die USA erfolgt auf Basis von EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO).</p>
+
+      <h4>Opt-Out</h4>
+      <p>Du kannst die Erfassung deiner Daten durch Google Analytics verhindern, indem du im Cookie-Banner „Nur Notwendige" wählst oder unter Cookie-Einstellungen Google Analytics deaktivierst. Alternativ steht das <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-Out Browser-Add-on</a> zur Verfügung.</p>
+
+      <p>Mehr Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google-Datenschutzerklärung</a></p>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="section-block" id="s7">
+    <div class="block-label">§ 7</div>
+    <div class="block-title">Meta Pixel (Facebook / Instagram)</div>
+    <div class="block-text">
+      <h4>Anbieter & Umfang</h4>
+      <p>Diese Website nutzt den <strong>Meta Pixel</strong>, ein Analyse- und Werbewerkzeug der <strong>Meta Platforms Ireland Ltd., 4 Grand Canal Square, Dublin 2, Irland</strong> (Muttergesellschaft: Meta Platforms Inc., 1 Hacker Way, Menlo Park, CA 94025, USA).</p>
+      <p>Über den Meta Pixel können wir das Verhalten von Besuchern auf unserer Website verfolgen und für zielgerichtete Werbung auf Facebook und Instagram nutzen. Erfasst werden unter anderem:</p>
+      <ul>
+        <li>Seitenaufrufe (PageView)</li>
+        <li>Konversionen (z. B. Wartelisten-Anmeldung = Lead-Event)</li>
+        <li>Geräte- und Browserinformationen</li>
+        <li>Gekürzte IP-Adresse</li>
+      </ul>
+
+      <h4>Gemeinsame Verantwortlichkeit (Art. 26 DSGVO)</h4>
+      <p>Meta und wir sind gemeinsam Verantwortliche für die Erhebung der Daten über den Meta Pixel und deren Übermittlung an Meta. Die Grundlage hierfür bilden die <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" rel="noopener">Meta-Verantwortlichenzusätze</a>. Meta übernimmt die primäre Verantwortung für die Wahrnehmung der DSGVO-Rechte nach Art. 15–20 DSGVO in Bezug auf die bei Meta gespeicherten Daten.</p>
+
+      <h4>Rechtsgrundlage</h4>
+      <p>Art. 6 Abs. 1 lit. a DSGVO. Der Meta Pixel wird erst nach deiner ausdrücklichen Einwilligung über das Cookie-Banner aktiviert. Ohne Einwilligung wird kein Pixel-Code ausgeführt.</p>
+
+      <h4>Datentransfer in die USA</h4>
+      <p>Meta überträgt Daten in die USA. Dies geschieht auf Basis von EU-Standardvertragsklauseln sowie dem EU-US Data Privacy Framework (Art. 45 DSGVO), dem Meta zertifiziert ist.</p>
+
+      <h4>Opt-Out</h4>
+      <p>Du kannst den Meta Pixel im Cookie-Banner unter „Einstellungen" deaktivieren. Zudem kannst du personalisierte Werbung in deinen <a href="https://www.facebook.com/settings/?tab=ads" target="_blank" rel="noopener">Facebook-Einstellungen</a> unter „Werbepräferenzen" verwalten.</p>
+
+      <p>Mehr Informationen: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta-Datenschutzerklärung</a></p>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="section-block" id="s8">
+    <div class="block-label">§ 8</div>
+    <div class="block-title">Datenübermittlung in Drittstaaten (USA)</div>
+    <div class="block-text">
+      <p>Einige der von uns eingesetzten Dienste übertragen personenbezogene Daten in die USA. Wir haben mit diesen Dienstleistern entsprechende Garantien vereinbart:</p>
+      <ul>
+        <li><strong>Google LLC:</strong> EU-Standardvertragsklauseln (SCCs) gemäß Art. 46 Abs. 2 lit. c DSGVO; Google ist zudem nach dem EU-US Data Privacy Framework zertifiziert.</li>
+        <li><strong>Meta Platforms Inc.:</strong> EU-Standardvertragsklauseln + EU-US Data Privacy Framework (Art. 45 DSGVO).</li>
+        <li><strong>Supabase Inc.:</strong> Datenspeicherung auf AWS-Servern in Frankfurt (EU-Region eu-central-1). Kein aktiver Transfer in die USA für Wartelisten-Daten.</li>
+      </ul>
+      <p>Ohne deine Einwilligung werden keine Tracking-Daten an US-amerikanische Server übermittelt.</p>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="section-block" id="s9">
+    <div class="block-label">§ 9</div>
+    <div class="block-title">Speicherdauer & Löschung</div>
+    <div class="block-text">
+      <ul>
+        <li><strong>Wartelisten-E-Mails:</strong> Bis zum Widerruf der Einwilligung oder bis 6 Monate nach dem offiziellen Launch von Apex, je nachdem, was zuerst eintritt.</li>
+        <li><strong>Cookie-Einwilligung:</strong> 12 Monate. Danach wird erneut nach deiner Einwilligung gefragt.</li>
+        <li><strong>Lokale Athletenprofile:</strong> Verbleiben im localStorage deines Browsers bis du sie manuell löschst.</li>
+        <li><strong>Google Analytics-Daten:</strong> Standardmäßig 14 Monate (gemäß unserer GA4-Konfiguration).</li>
+        <li><strong>Server-Logfiles:</strong> 7 Tage.</li>
+      </ul>
+      <p>Nach Ablauf der Speicherfrist oder auf dein Ersuchen hin werden Daten gelöscht, es sei denn, gesetzliche Aufbewahrungspflichten stehen dem entgegen.</p>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="section-block" id="s10">
+    <div class="block-label">§ 10</div>
+    <div class="block-title">Deine Rechte</div>
+    <div class="block-text">
+      <p>Als betroffene Person stehen dir folgende Rechte zu. Zur Ausübung wende dich an <a href="/cdn-cgi/l/email-protection#345a5d58475941575f0501745359555d581a575b59"><span class="__cf_email__" data-cfemail="422c2b2e312f372129737702252f232b2e6c212d2f">[email&#160;protected]</span></a>:</p>
+      <div class="rights-grid">
+        <div class="rights-item">
+          <div class="rights-item-name">Auskunft</div>
+          <div class="rights-item-art">Art. 15 DSGVO</div>
+          <div class="rights-item-desc">Du hast das Recht zu erfahren, welche Daten wir über dich gespeichert haben.</div>
+        </div>
+        <div class="rights-item">
+          <div class="rights-item-name">Berichtigung</div>
+          <div class="rights-item-art">Art. 16 DSGVO</div>
+          <div class="rights-item-desc">Unrichtige oder unvollständige Daten können auf deine Anfrage hin korrigiert werden.</div>
+        </div>
+        <div class="rights-item">
+          <div class="rights-item-name">Löschung</div>
+          <div class="rights-item-art">Art. 17 DSGVO</div>
+          <div class="rights-item-desc">Du kannst die Löschung deiner Daten verlangen, sofern keine Aufbewahrungspflichten bestehen.</div>
+        </div>
+        <div class="rights-item">
+          <div class="rights-item-name">Einschränkung</div>
+          <div class="rights-item-art">Art. 18 DSGVO</div>
+          <div class="rights-item-desc">Du kannst die Verarbeitung deiner Daten unter bestimmten Umständen einschränken lassen.</div>
+        </div>
+        <div class="rights-item">
+          <div class="rights-item-name">Datenübertragbarkeit</div>
+          <div class="rights-item-art">Art. 20 DSGVO</div>
+          <div class="rights-item-desc">Du hast das Recht, deine Daten in einem gängigen Format zu erhalten oder an Dritte übertragen zu lassen.</div>
+        </div>
+        <div class="rights-item">
+          <div class="rights-item-name">Widerspruch</div>
+          <div class="rights-item-art">Art. 21 DSGVO</div>
+          <div class="rights-item-desc">Du kannst der Verarbeitung widersprechen, wenn sie auf berechtigtem Interesse beruht.</div>
+        </div>
+        <div class="rights-item">
+          <div class="rights-item-name">Widerruf</div>
+          <div class="rights-item-art">Art. 7 Abs. 3 DSGVO</div>
+          <div class="rights-item-desc">Einwilligungen können jederzeit mit Wirkung für die Zukunft widerrufen werden.</div>
+        </div>
+        <div class="rights-item">
+          <div class="rights-item-name">Beschwerde</div>
+          <div class="rights-item-art">Art. 77 DSGVO</div>
+          <div class="rights-item-desc">Du hast das Recht, dich bei der zuständigen Aufsichtsbehörde zu beschweren (siehe § 11).</div>
+        </div>
+      </div>
+      <p style="margin-top:16px;">Wir beantworten Anfragen in der Regel innerhalb von <strong>30 Tagen</strong> (Art. 12 Abs. 3 DSGVO). Ist die Anfrage besonders komplex, verlängert sich die Frist auf bis zu 90 Tage; wir informieren dich darüber.</p>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="section-block" id="s11">
+    <div class="block-label">§ 11</div>
+    <div class="block-title">Beschwerderecht bei der Aufsichtsbehörde</div>
+    <div class="block-text">
+      <p>Du hast gemäß Art. 77 DSGVO das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Die zuständige Aufsichtsbehörde für unseren Sitz in Baden-Württemberg ist:</p>
+      <p>
+        <strong>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg (LfDI BW)</strong><br>
+        Königstraße 10a<br>
+        70173 Stuttgart<br>
+        Telefon: +49 711 615541-0<br>
+        E-Mail: <a href="/cdn-cgi/l/email-protection#f4849b8780878091989891b49892909dda968398da9091"><span class="__cf_email__" data-cfemail="bdcdd2cec9cec9d8d1d1d8fdd1dbd9d493dfcad193d9d8">[email&#160;protected]</span></a><br>
+        Website: <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">www.baden-wuerttemberg.datenschutz.de</a>
+      </p>
+      <p>Du kannst dich auch an die Aufsichtsbehörde deines gewöhnlichen Aufenthaltsortes oder Arbeitsplatzes wenden.</p>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="section-block" id="s12">
+    <div class="block-label">§ 12</div>
+    <div class="block-title">Automatisierte Entscheidungsfindung</div>
+    <div class="block-text">
+      <p>Wir setzen keine automatisierte Entscheidungsfindung einschließlich Profiling im Sinne von Art. 22 DSGVO ein, die dir gegenüber rechtliche Wirkung entfaltet oder dich in ähnlicher Weise erheblich beeinträchtigt.</p>
+      <p>Der auf der Website berechnete „Apex Score" ist ein rein lokales Rechenwerkzeug ohne Speicherung personenbezogener Leistungsdaten auf unseren Servern. Es werden keine Entscheidungen auf Basis dieses Scores getroffen.</p>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="section-block" id="s13">
+    <div class="block-label">§ 13</div>
+    <div class="block-title">Änderungen dieser Erklärung</div>
+    <div class="block-text">
+      <p>Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um sie an geänderte Rechtslage oder an Änderungen unserer Dienste anzupassen. Die jeweils aktuelle Version ist unter dieser URL abrufbar. Das Datum der letzten Aktualisierung ist oben angegeben.</p>
+      <p>Wesentliche Änderungen, die deine gespeicherten Daten oder deine Einwilligung betreffen, werden wir dir per E-Mail mitteilen, sofern wir deine E-Mail-Adresse gespeichert haben.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <svg width="18" height="18" viewBox="0 0 80 80" fill="none">
+      <path d="M40 7 L6 73 L74 73 Z" stroke="
