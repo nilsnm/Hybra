@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="de" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Datenschutzerklärung — HYBRA</title>
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#060606">
+<link rel="canonical" href="https://hybra.app/datenschutz.html">
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="favicon-16x16.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;600;700;800&family=Barlow:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --void:   #060606;
+  --carbon: #0D0D0D;
+  --steel:  #161616;
+  --titanium:#242424;
+  --alloy:  #6A757D;
+  --mist:   #9EAAB3;
+  --vapor:  #CDD5DA;
+  --white:  #ECEEF0;
+  --volt:   #D4FF00;
+  --volt-dim:rgba(212,255,0,0.06);
+  --r: 2px;
+
+  --font-display:'Barlow Condensed',sans-serif;
+  --font-data:   'Satoshi',sans-serif;
+  --font-body:   'Satoshi',sans-serif;
+
+  --fs-body:    16px;
+  --fs-body-sm: 14px;
+  --lh-body:    1.8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:72px;}
+*{-webkit-tap-highlight-color:transparent;}
+body{
+  background:var(--void);
+  color:var(--white);
+  font-family:var(--font-body);
+  font-size:var(--fs-body);
+  font-weight:400;
+  line-height:var(--lh-body);
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:-1;opacity:1;
+}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 52px;
+  background:rgba(6,6,6,.98);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-name{
+  font-family:var(--font-display);font-weight:800;
+  font-size:14px;letter-spacing:2px;color:var(--white);
+  text-transform:uppercase;
+}
+.nav-back{
+  font-family:var(--font-data);font-size:10px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;
+  color:var(--alloy);background:none;border:none;cursor:pointer;
+  display:flex;align-items:center;gap:6px;text-decoration:none;
+  transition:color .2s;
+}
+.nav-back:hover{color:var(--white);}
+
+main{
+  max-width:760px;
+  margin:0 auto;
+  padding:120px 32px 80px;
+}
+
+/* TOC */
+.toc{
+  background:var(--steel);
+  border:1px solid rgba(255,255,255,.07);
+  padding:20px 24px;
+  margin-bottom:48px;
+}
+.toc-title{
+  font-family:var(--font-data);font-size:10px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,.35);margin-bottom:12px;
+}
+.toc ol{padding-left:18px;color:var(--alloy);font-size:var(--fs-body-sm);}
+.toc li{margin-bottom:4px;}
+.toc a{color:var(--alloy);text-decoration:none;transition:color .15s;}
+.toc a:hover{color:var(--volt);}
+
+h1{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(40px,6vw,64px);
+  letter-spacing:1px;line-height:.95;
+  color:var(--white);
+  margin-bottom:8px;
+  text-transform:uppercase;
+}
+.page-sub{
+  font-size:var(--fs-body-sm);color:var(--mist);
+  margin-bottom:32px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding-bottom:28px;
+}
+h2{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(18px,2.5vw,24px);
+  letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--volt);
+  margin:40px 0 12px;
+  scroll-margin-top:90px;
+}
+h3{
+  font-family:var(--font-data);font-weight:600;
+  font-size:var(--fs-body);
+  color:var(--vapor);
+  margin:24px 0 8px;
+}
+p{
+  font-size:var(--fs-body);
+  color:var(--mist);
+  line-height:var(--lh-body);
+  text-align:justify;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+  margin-bottom:16px;
+}
+p:last-child{margin-bottom:0;}
+ul,ol{color:var(--mist);font-size:var(--fs-body);margin:12px 0 16px 20px;line-height:var(--lh-body);}
+li{margin-bottom:6px;}
+a{color:var(--volt);text-decoration:none;transition:opacity .15s;}
+a:hover{opacity:.75;text-decoration:underline;text-underline-offset:3px;}
+strong{color:var(--white);font-weight:600;}
+
+.info-box{
+  background:rgba(212,255,0,.04);
+  border:1px solid rgba(212,255,0,.15);
+  border-left:3px solid var(--volt);
+  padding:20px 24px;
+  margin:24px 0;
+  font-size:var(--fs-body-sm);
+  color:var(--mist);
+  line-height:var(--lh-body);
+}
+.info-box strong{color:var(--volt);}
+
+.contact-box{
+  background:var(--steel);
+  border:1px solid rgba(255,255,255,.07);
+  border-left:3px solid var(--volt);
+  padding:24px 28px;
+  margin:24px 0;
+  font-size:var(--fs-body);
+  color:var(--mist);
+  line-height:2;
+}
+.contact-box strong{display:block;color:var(--white);font-size:var(--fs-body-sm);letter-spacing:.5px;margin-bottom:4px;}
+
+.legal-section{
+  border-top:1px solid rgba(255,255,255,.06);
+  padding-top:8px;
+  margin-top:16px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 32px;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+footer a{color:rgba(255,255,255,.3);}
+footer a:hover{color:var(--white);}
+
+@media(max-width:700px){
+  nav{padding:14px 18px;}
+  main{padding:90px 20px 60px;}
+}
+@media(max-width:480px){
+  nav{padding:12px 16px;}
+  .nav-logo-name{font-size:12px;}
+}
+</style>
+<meta name="google-site-verification" content="UpV6ulgPr7bufUVnTF2KflxH89i6RzQba-oRERJTrZ8" />
+
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage:    'denied',
+    ad_storage:           'denied',
+    ad_user_data:         'denied',
+    ad_personalization:   'denied',
+    wait_for_update:      1500
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HPS28KMGK6"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-HPS28KMGK6', { anonymize_ip: true });
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html#site-footer" class="nav-logo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <rect x="1.5" y="3" width="4.5" height="18" fill="#ECEEF0"/>
+      <rect x="9.75" y="9" width="4.5" height="6" fill="#D4FF00"/>
+      <rect x="18" y="3" width="4.5" height="18" fill="#ECEEF0"/>
+    </svg>
+    <span class="nav-logo-name">HYBRA</span>
+  </a>
+  <a href="index.html#site-footer" class="nav-back">
+    <svg viewBox="0 0 16 16" fill="none" width="12" height="12"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span id="back-label">Zurück</span>
+  </a>
+</nav>
+
+<main>
+
+  <!-- ══════════════ GERMAN ══════════════ -->
+  <div id="content-de">
+    <h1>Datenschutz&shy;erklärung</h1>
+    <p class="page-sub">Letzte Aktualisierung: März 2026 &nbsp;·&nbsp; Art. 13 DSGVO / § 25 TDDDG</p>
+
+    <div class="toc">
+      <div class="toc-title">Inhaltsverzeichnis</div>
+      <ol>
+        <li><a href="#de-verantwortlicher">Verantwortlicher</a></li>
+        <li><a href="#de-grundsaetze">Grundsätze der Datenverarbeitung</a></li>
+        <li><a href="#de-cookies">Cookies und lokale Speicherung</a></li>
+        <li><a href="#de-analytics">Google Analytics 4</a></li>
+        <li><a href="#de-meta">Meta Pixel</a></li>
+        <li><a href="#de-hosting">Hosting &amp; Infrastruktur</a></li>
+        <li><a href="#de-rechte">Ihre Rechte</a></li>
+        <li><a href="#de-kontakt">Kontakt &amp; Beschwerden</a></li>
+      </ol>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="de-verantwortlicher">1. Verantwortlicher</h2>
+      <div class="contact-box">
+        <strong>Nils Ian Muck</strong>
+        Sandroggenstraße 10a<br>
+        79395 Neuenburg am Rhein<br>
+        Deutschland<br><br>
+        <strong>Datenschutzkontakt</strong>
+        E-Mail: <a href="/cdn-cgi/l/email-protection#fb95929788968e9890cacebb9c969a9297d5989496"><span class="__cf_email__" data-cfemail="abc5c2c7d8c6dec8c09a9eebccc6cac2c785c8c4c6">[email&#160;protected]</span></a>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="de-grundsaetze">2. Grundsätze der Datenverarbeitung</h2>
+      <p>Wir verarbeiten personenbezogene Daten nur soweit dies zur Bereitstellung unseres Angebots erforderlich ist oder Sie ausdrücklich eingewilligt haben. Rechtsgrundlagen für die Verarbeitung sind insbesondere Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) sowie § 25 TDDDG für den Einsatz von Cookies und ähnlichen Technologien.</p>
+      <p>Alle Angaben, die Sie im HYBRA-Kalkulator eingeben (Name, körperliche Kennzahlen, Leistungswerte), werden <strong>ausschließlich lokal in Ihrem Browser</strong> gespeichert (localStorage). Diese Daten verlassen Ihr Gerät nicht und werden nicht an unsere Server übertragen.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="de-cookies">3. Cookies und lokale Speicherung</h2>
+      <h3>Technisch notwendige Speicherung</h3>
+      <p>Wir verwenden localStorage, um Ihre Cookie-Einwilligungsentscheidung, gespeicherte Athletenprofile sowie Ihre Formulareingaben zwischen Sitzungen zu erhalten. Diese Speicherung ist technisch notwendig für den einwandfreien Betrieb der Anwendung und erfordert keine gesonderte Einwilligung gemäß § 25 Abs. 2 TDDDG.</p>
+
+      <h3>Analytische und Marketing-Cookies</h3>
+      <p>Analytische Cookies (Google Analytics) und Marketing-Cookies (Meta Pixel) werden nur nach Ihrer ausdrücklichen Einwilligung gesetzt. Sie können Ihre Einwilligung jederzeit über den Link „Cookie Settings" im Footer dieser Seite widerrufen.</p>
+
+      <div class="info-box">
+        <strong>Ihre Wahl:</strong> Sie können jederzeit am Ende der Hauptseite auf „Cookie Settings" klicken, um Ihre Präferenzen anzupassen oder Einwilligungen zu widerrufen.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="de-analytics">4. Google Analytics 4</h2>
+      <p>Mit Ihrer Einwilligung setzen wir Google Analytics 4, einen Webanalysedienst der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA ein.</p>
+      <p><strong>Zweck:</strong> Anonyme Messung der Websitenutzung (Seitenaufrufe, Sitzungsdauer, Nutzerherkunft) zur Verbesserung unseres Angebots.</p>
+      <p><strong>Verarbeitete Daten:</strong> IP-Adresse (anonymisiert), Browser-Typ, Betriebssystem, Referrer-URL, Seitenaufrufe, Sitzungsdauer.</p>
+      <p><strong>Datenübertragung in Drittländer:</strong> Google LLC ist in den USA ansässig. Grundlage der Übertragung ist das EU-US Data Privacy Framework (Angemessenheitsbeschluss der Europäischen Kommission vom 10. Juli 2023).</p>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG.</p>
+      <p><strong>Opt-out:</strong> Sie können die Datenerfassung durch Google Analytics verhindern, indem Sie das <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out-Browser-Add-on</a> installieren oder Ihre Einwilligung über unsere Cookie-Einstellungen widerrufen.</p>
+      <p>Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="de-meta">5. Meta Pixel</h2>
+      <p>Mit Ihrer Einwilligung verwenden wir den Meta Pixel von Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland.</p>
+      <p><strong>Zweck:</strong> Messung der Wirksamkeit von Werbeanzeigen auf Facebook und Instagram sowie Ermöglichung zielgruppenbasierter Werbung.</p>
+      <p><strong>Verarbeitete Daten:</strong> Seitenaufrufe, Conversion-Ereignisse, Geräteinformationen, ggf. gehashte E-Mail-Adresse bei Formularübermittlung.</p>
+      <p><strong>Datenübertragung in Drittländer:</strong> Daten können an Meta Platforms Inc. in die USA übertragen werden. Grundlage sind Standardvertragsklauseln gemäß Art. 46 DSGVO.</p>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG.</p>
+      <p>Weitere Informationen: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Datenschutzrichtlinie</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="de-hosting">6. Hosting &amp; Infrastruktur</h2>
+      <p>Unsere Website wird über <strong>Cloudflare Pages</strong> (Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf unserer Seiten werden technisch bedingt Verbindungsdaten (IP-Adresse, Uhrzeit, aufgerufene URL) verarbeitet. Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
+      <p>Weitere Informationen: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="de-rechte">7. Ihre Rechte</h2>
+      <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
+      <ul>
+        <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO)</li>
+        <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO)</li>
+        <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO)</li>
+        <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li>
+        <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+        <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO)</li>
+        <li><strong>Recht auf Widerruf</strong> einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
+      </ul>
+      <p>Da wir keine personenbezogenen Daten auf unseren Servern speichern (alle Nutzerdaten verbleiben in Ihrem Browser), bezieht sich ein Auskunfts- oder Löschbegehren primär auf die von Drittanbietern (Google, Meta) gespeicherten Daten. Bitte wenden Sie sich hierfür direkt an die jeweiligen Anbieter.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="de-kontakt">8. Kontakt &amp; Beschwerden</h2>
+      <p>Bei Fragen zum Datenschutz wenden Sie sich bitte an: <a href="/cdn-cgi/l/email-protection#214f484d524c54424a101461464c40484d0f424e4c"><span class="__cf_email__" data-cfemail="690700051a041c0a02585c290e04080005470a0604">[email&#160;protected]</span></a></p>
+      <p>Sie haben zudem das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die für uns zuständige Aufsichtsbehörde ist:</p>
+      <div class="contact-box">
+        <strong>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg</strong>
+        Lautenschlagerstraße 20<br>
+        70173 Stuttgart<br>
+        <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">www.baden-wuerttemberg.datenschutz.de</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ ENGLISH ══════════════ -->
+  <div id="content-en" style="display:none;">
+    <h1>Privacy Policy</h1>
+    <p class="page-sub">Last updated: March 2026 &nbsp;·&nbsp; GDPR Art. 13 / § 25 TDDDG</p>
+
+    <div class="toc">
+      <div class="toc-title">Table of Contents</div>
+      <ol>
+        <li><a href="#en-controller">Controller</a></li>
+        <li><a href="#en-principles">Principles of Data Processing</a></li>
+        <li><a href="#en-cookies">Cookies and Local Storage</a></li>
+        <li><a href="#en-analytics">Google Analytics 4</a></li>
+        <li><a href="#en-meta">Meta Pixel</a></li>
+        <li><a href="#en-hosting">Hosting &amp; Infrastructure</a></li>
+        <li><a href="#en-rights">Your Rights</a></li>
+        <li><a href="#en-contact">Contact &amp; Complaints</a></li>
+      </ol>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="en-controller">1. Controller</h2>
+      <div class="contact-box">
+        <strong>Nils Ian Muck</strong>
+        Sandroggenstraße 10a<br>
+        79395 Neuenburg am Rhein<br>
+        Germany<br><br>
+        <strong>Data Protection Contact</strong>
+        Email: <a href="/cdn-cgi/l/email-protection#c3adaaafb0aeb6a0a8f2f683a4aea2aaafeda0acae"><span class="__cf_email__" data-cfemail="c3adaaafb0aeb6a0a8f2f683a4aea2aaafeda0acae">[email&#160;protected]</span></a>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="en-principles">2. Principles of Data Processing</h2>
+      <p>We process personal data only to the extent necessary to provide our service or where you have expressly consented. The legal bases for processing are in particular Art. 6(1)(a) GDPR (consent), Art. 6(1)(f) GDPR (legitimate interest) and § 25 TDDDG for the use of cookies and similar technologies.</p>
+      <p>All data you enter in the HYBRA calculator (name, physical metrics, performance values) is stored <strong>exclusively in your browser's localStorage</strong>. This data never leaves your device and is not transmitted to our servers.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="en-cookies">3. Cookies and Local Storage</h2>
+      <h3>Technically Necessary Storage</h3>
+      <p>We use localStorage to preserve your cookie consent decision, saved athlete profiles, and your form inputs between sessions. This storage is technically necessary for the application to function correctly and does not require separate consent pursuant to § 25 para. 2 TDDDG.</p>
+
+      <h3>Analytics and Marketing Cookies</h3>
+      <p>Analytics cookies (Google Analytics) and marketing cookies (Meta Pixel) are only set with your explicit consent. You may withdraw your consent at any time via the "Cookie Settings" link in the footer of the main page.</p>
+
+      <div class="info-box">
+        <strong>Your choice:</strong> Click "Cookie Settings" at the bottom of the main page at any time to adjust your preferences or withdraw consent.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="en-analytics">4. Google Analytics 4</h2>
+      <p>With your consent, we use Google Analytics 4, a web analytics service provided by Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</p>
+      <p><strong>Purpose:</strong> Anonymous measurement of website usage (page views, session duration, visitor origin) to improve our service.</p>
+      <p><strong>Data processed:</strong> IP address (anonymized), browser type, operating system, referrer URL, page views, session duration.</p>
+      <p><strong>Third-country transfers:</strong> Google LLC is based in the USA. The transfer is based on the EU–US Data Privacy Framework (European Commission adequacy decision of 10 July 2023).</p>
+      <p><strong>Legal basis:</strong> Art. 6(1)(a) GDPR, § 25 para. 1 TDDDG.</p>
+      <p><strong>Opt-out:</strong> You can prevent data collection by Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a> or by withdrawing consent via our cookie settings.</p>
+      <p>Further information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="en-meta">5. Meta Pixel</h2>
+      <p>With your consent, we use the Meta Pixel from Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland.</p>
+      <p><strong>Purpose:</strong> Measuring the effectiveness of advertisements on Facebook and Instagram and enabling audience-targeted advertising.</p>
+      <p><strong>Data processed:</strong> Page views, conversion events, device information, and potentially hashed email address upon form submission.</p>
+      <p><strong>Third-country transfers:</strong> Data may be transferred to Meta Platforms Inc. in the USA on the basis of Standard Contractual Clauses pursuant to Art. 46 GDPR.</p>
+      <p><strong>Legal basis:</strong> Art. 6(1)(a) GDPR, § 25 para. 1 TDDDG.</p>
+      <p>Further information: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="en-hosting">6. Hosting &amp; Infrastructure</h2>
+      <p>Our website is hosted via <strong>Cloudflare Pages</strong> (Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, USA). When you access our pages, connection data (IP address, timestamp, requested URL) is technically processed. Cloudflare is certified under the EU–US Data Privacy Framework.</p>
+      <p>Further information: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="en-rights">7. Your Rights</h2>
+      <p>You have the following rights with regard to your personal data:</p>
+      <ul>
+        <li><strong>Right of access</strong> (Art. 15 GDPR)</li>
+        <li><strong>Right to rectification</strong> (Art. 16 GDPR)</li>
+        <li><strong>Right to erasure</strong> (Art. 17 GDPR)</li>
+        <li><strong>Right to restriction of processing</strong> (Art. 18 GDPR)</li>
+        <li><strong>Right to data portability</strong> (Art. 20 GDPR)</li>
+        <li><strong>Right to object</strong> (Art. 21 GDPR)</li>
+        <li><strong>Right to withdraw consent</strong> at any time (Art. 7(3) GDPR)</li>
+      </ul>
+      <p>Since we do not store personal data on our servers (all user data remains in your browser), requests for access or erasure primarily relate to data stored by third-party providers (Google, Meta). Please contact those providers directly for such requests.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="en-contact">8. Contact &amp; Complaints</h2>
+      <p>For questions about data protection, please contact: <a href="/cdn-cgi/l/email-protection#e38d8a8f908e968088d2d6a3848e828a8fcd808c8e"><span class="__cf_email__" data-cfemail="1f7176736c726a7c742e2a5f78727e7673317c7072">[email&#160;protected]</span></a></p>
+      <p>You also have the right to lodge a complaint with a supervisory authority. The authority competent for us is:</p>
+      <div class="contact-box">
+        <strong>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg</strong>
+        (State Commissioner for Data Protection and Freedom of Information Baden-Württemberg)<br>
+        Lautenschlagerstraße 20, 70173 Stuttgart, Germany<br>
+        <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">www.baden-wuerttemberg.datenschutz.de</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ SPANISH ══════════════ -->
+  <div id="content-es" style="display:none;">
+    <h1>Política de Privacidad</h1>
+    <p class="page-sub">Última actualización: marzo 2026 &nbsp;·&nbsp; RGPD Art. 13 / § 25 TDDDG</p>
+
+    <div class="toc">
+      <div class="toc-title">Índice</div>
+      <ol>
+        <li><a href="#es-controller">Responsable del tratamiento</a></li>
+        <li><a href="#es-principles">Principios del tratamiento de datos</a></li>
+        <li><a href="#es-cookies">Cookies y almacenamiento local</a></li>
+        <li><a href="#es-analytics">Google Analytics 4</a></li>
+        <li><a href="#es-meta">Meta Pixel</a></li>
+        <li><a href="#es-hosting">Alojamiento e infraestructura</a></li>
+        <li><a href="#es-rights">Tus derechos</a></li>
+        <li><a href="#es-contact">Contacto y reclamaciones</a></li>
+      </ol>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="es-controller">1. Responsable del tratamiento</h2>
+      <div class="contact-box">
+        <strong>Nils Ian Muck</strong>
+        Sandroggenstraße 10a<br>
+        79395 Neuenburg am Rhein<br>
+        Alemania<br><br>
+        <strong>Contacto para protección de datos</strong>
+        Email: <a href="/cdn-cgi/l/email-protection#3e5057524d534b5d550f0b7e59535f5752105d5153"><span class="__cf_email__" data-cfemail="b4daddd8c7d9c1d7df8581f4d3d9d5ddd89ad7dbd9">[email&#160;protected]</span></a>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="es-principles">2. Principios del tratamiento de datos</h2>
+      <p>Tratamos datos personales únicamente en la medida necesaria para prestar nuestro servicio o cuando hayas dado tu consentimiento expreso. Las bases legales del tratamiento son en particular el Art. 6(1)(a) RGPD (consentimiento), el Art. 6(1)(f) RGPD (interés legítimo) y el § 25 TDDDG para el uso de cookies y tecnologías similares.</p>
+      <p>Todos los datos que introduces en la calculadora HYBRA (nombre, métricas físicas, valores de rendimiento) se almacenan <strong>exclusivamente en el localStorage de tu navegador</strong>. Estos datos nunca salen de tu dispositivo y no se transmiten a nuestros servidores.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="es-cookies">3. Cookies y almacenamiento local</h2>
+      <h3>Almacenamiento técnicamente necesario</h3>
+      <p>Usamos localStorage para conservar tu decisión de consentimiento de cookies, perfiles de atleta guardados y tus entradas de formulario entre sesiones. Este almacenamiento es técnicamente necesario para que la aplicación funcione correctamente y no requiere consentimiento separado según § 25 párr. 2 TDDDG.</p>
+
+      <h3>Cookies analíticas y de marketing</h3>
+      <p>Las cookies analíticas (Google Analytics) y de marketing (Meta Pixel) solo se establecen con tu consentimiento explícito. Puedes retirar tu consentimiento en cualquier momento a través del enlace "Ajustes de cookies" en el pie de página principal.</p>
+
+      <div class="info-box">
+        <strong>Tu elección:</strong> Haz clic en "Ajustes de cookies" en la parte inferior de la página principal en cualquier momento para ajustar tus preferencias o retirar el consentimiento.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="es-analytics">4. Google Analytics 4</h2>
+      <p>Con tu consentimiento, utilizamos Google Analytics 4, un servicio de análisis web de Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, EE.UU.</p>
+      <p><strong>Finalidad:</strong> Medición anónima del uso del sitio web (páginas vistas, duración de la sesión, origen de los visitantes) para mejorar nuestro servicio.</p>
+      <p><strong>Datos tratados:</strong> Dirección IP (anonimizada), tipo de navegador, sistema operativo, URL de referencia, páginas vistas, duración de la sesión.</p>
+      <p><strong>Transferencias a terceros países:</strong> Google LLC está basada en EE.UU. La transferencia se basa en el Marco de Privacidad de Datos UE-EE.UU. (decisión de adecuación de la Comisión Europea de 10 de julio de 2023).</p>
+      <p><strong>Base legal:</strong> Art. 6(1)(a) RGPD, § 25 párr. 1 TDDDG.</p>
+      <p>Más información: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="es-meta">5. Meta Pixel</h2>
+      <p>Con tu consentimiento, utilizamos el Meta Pixel de Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublín 2, Irlanda.</p>
+      <p><strong>Finalidad:</strong> Medir la eficacia de los anuncios en Facebook e Instagram y permitir publicidad dirigida a audiencias.</p>
+      <p><strong>Datos tratados:</strong> Páginas vistas, eventos de conversión, información del dispositivo y potencialmente dirección de email hasheada al enviar formularios.</p>
+      <p><strong>Transferencias a terceros países:</strong> Los datos pueden transferirse a Meta Platforms Inc. en EE.UU. sobre la base de Cláusulas Contractuales Estándar según el Art. 46 RGPD.</p>
+      <p><strong>Base legal:</strong> Art. 6(1)(a) RGPD, § 25 párr. 1 TDDDG.</p>
+      <p>Más información: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Política de privacidad de Meta</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="es-hosting">6. Alojamiento e infraestructura</h2>
+      <p>Nuestro sitio web está alojado en <strong>Cloudflare Pages</strong> (Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, EE.UU.). Al acceder a nuestras páginas, los datos de conexión (dirección IP, marca de tiempo, URL solicitada) son procesados técnicamente. Cloudflare está certificada bajo el Marco de Privacidad de Datos UE-EE.UU.</p>
+      <p>Más información: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Política de privacidad de Cloudflare</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="es-rights">7. Tus derechos</h2>
+      <p>Tienes los siguientes derechos con respecto a tus datos personales:</p>
+      <ul>
+        <li><strong>Derecho de acceso</strong> (Art. 15 RGPD)</li>
+        <li><strong>Derecho de rectificación</strong> (Art. 16 RGPD)</li>
+        <li><strong>Derecho de supresión</strong> (Art. 17 RGPD)</li>
+        <li><strong>Derecho a la limitación del tratamiento</strong> (Art. 18 RGPD)</li>
+        <li><strong>Derecho a la portabilidad de datos</strong> (Art. 20 RGPD)</li>
+        <li><strong>Derecho de oposición</strong> (Art. 21 RGPD)</li>
+        <li><strong>Derecho a retirar el consentimiento</strong> en cualquier momento (Art. 7(3) RGPD)</li>
+      </ul>
+      <p>Como no almacenamos datos personales en nuestros servidores (todos los datos del usuario permanecen en tu navegador), las solicitudes de acceso o supresión se refieren principalmente a datos almacenados por proveedores externos (Google, Meta). Por favor, contacta directamente con esos proveedores para dichas solicitudes.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 id="es-contact">8. Contacto y reclamaciones</h2>
+      <p>Para preguntas sobre protección de datos, contacta: <a href="/cdn-cgi/l/email-protection#690700051a041c0a02585c290e04080005470a0604"><span class="__cf_email__" data-cfemail="335d5a5f405e465058020673545e525a5f1d505c5e">[email&#160;protected]</span></a></p>
+      <p>También tienes derecho a presentar una reclamación ante una autoridad supervisora. La autoridad competente para nosotros es:</p>
+      <div class="contact-box">
+        <strong>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg</strong>
+        (Comisionado Estatal para la Protección de Datos y la Libertad de Información de Baden-Württemberg)<br>
+        Lautenschlagerstraße 20, 70173 Stuttgart, Alemania<br>
+        <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">www.baden-wuerttemberg.datenschutz.de</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer id="site-footer">
+  <div class="footer-logo">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <rect x="1.7" y="2.5" width="3.2" height="13" fill="rgba(212,255,0,0.25)"/>
+      <rect x="7.4" y="6.5" width="3.2" height="5" fill="rgba(212,255,0,0.25)"/>
+      <rect x="13.1" y="2.5" width="3.2" height="13" fill="rgba(212,255,0,0.25)"/>
+    </svg>
+    <span class="footer-logo-name">HYBRA</span>
+  </div>
+  <div class="footer-text" id="footer-copy">© 2026 Hybra · Hybrid-Athleten Performance Index</div>
+  <div class="footer-legal-links">
+    <a href="impressum.html" class="footer-legal-link" id="footer-legal">Impressum</a>
+    <span class="footer-legal-sep">·</span>
+    <a href="datenschutz.html" class="footer-legal-link" id="footer-privacy">Datenschutz</a>
+    <span class="footer-legal-sep">·</span>
+    <a href="index.html" class="footer-legal-link" id="footer-back">← Zurück zu HYBRA</a>
+  </div>
+</footer>
+<style>
+.footer-logo{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:8px;}
+.footer-logo-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:2px;color:rgba(212,255,0,0.25);text-transform:uppercase;}
+.footer-text{font-size:11px;color:rgba(255,255,255,.18);letter-spacing:.5px;margin-bottom:6px;}
+.footer-legal-links{display:flex;align-items:center;gap:6px;justify-content:center;flex-wrap:wrap;}
+.footer-legal-link{font-family:'Satoshi',sans-serif;font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.28);text-transform:uppercase;text-decoration:none;transition:color .2s;}
+.footer-legal-link:hover{color:rgba(255,255,255,.6);}
+.footer-legal-sep{color:rgba(255,255,255,.15);font-size:9px;}
+</style>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+const PRIVACY_LANGS = {
+  en: { title:'Privacy Policy — HYBRA',         back:'Back',   footer_legal:'Legal Notice', footer_privacy:'Privacy Policy', footer_back:'← Back to HYBRA',   footer_copy:'© 2026 Hybra · Hybrid Athlete Performance Index' },
+  de: { title:'Datenschutzerklärung — HYBRA',   back:'Zurück', footer_legal:'Impressum',    footer_privacy:'Datenschutz',   footer_back:'← Zurück zu HYBRA', footer_copy:'© 2026 Hybra · Hybrid-Athleten Performance Index' },
+  es: { title:'Política de Privacidad — HYBRA', back:'Volver', footer_legal:'Aviso Legal',  footer_privacy:'Privacidad',    footer_back:'← Volver a HYBRA', footer_copy:'© 2026 Hybra · Índice de Rendimiento del Atleta Híbrido' }
+};
+
+function setLang(lang) {
+  ['de','en','es'].forEach(function(l){
+    var el = document.getElementById('content-' + l);
+    if (el) el.style.display = (l === lang) ? '' : 'none';
+  });
+  var L = PRIVACY_LANGS[lang] || PRIVACY_LANGS.de;
+  document.getElementById('html-root').setAttribute('lang', lang);
+  document.getElementById('page-title').textContent = L.title;
+  document.getElementById('back-label').textContent  = L.back;
+  var fLegal   = document.getElementById('footer-legal');
+  var fPrivacy = document.getElementById('footer-privacy');
+  var fBack    = document.getElementById('footer-back');
+  var fCopy    = document.getElementById('footer-copy');
+  if (fLegal)   fLegal.textContent   = L.footer_legal;
+  if (fPrivacy) fPrivacy.textContent = L.footer_privacy;
+  if (fBack)    fBack.textContent    = L.footer_back;
+  if (fCopy)    fCopy.textContent    = L.footer_copy;
+  try { localStorage.setItem('apex_lang', lang); } catch(e) {}
+}
+
+// Auto-detect from main site localStorage key
+(function(){
+  var lang = 'de';
+  try {
+    var saved = localStorage.getItem('apex_lang');
+    if (saved === 'en' || saved === 'de' || saved === 'es') { lang = saved; }
+    else {
+      var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (nav.startsWith('en')) lang = 'en';
+      else if (nav.startsWith('es')) lang = 'es';
+      else lang = 'de';
+    }
+  } catch(e) {}
+  setLang(lang);
+})();
+</script>
+
+</body>
+</html>
